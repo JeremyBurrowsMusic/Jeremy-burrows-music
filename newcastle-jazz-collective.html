@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Newcastle Jazz Collective — live jazz in Newcastle, NSW</title>
+<meta name="description" content="A hard bop sextet in Newcastle, NSW. Jazz musicians from across the Hunter playing the Art Blakey and the Jazz Messengers book — the arrangements exactly as written, the solos improvised. Available to presenters, festivals and venues.">
+<link rel="canonical" href="https://jeremy-burrows-music.com/newcastle-jazz-collective.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Newcastle Jazz Collective">
+<meta property="og:description" content="A hard bop sextet in Newcastle, NSW. The Jazz Messengers book — arrangements as written, solos our own.">
+<meta name="theme-color" content="#0E1A21">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230E1A21'/%3E%3Crect x='6' y='16' width='4' height='11' fill='%23C79A3C'/%3E%3Crect x='13' y='7' width='4' height='20' fill='%23EDE6D8'/%3E%3Crect x='20' y='12' width='4' height='15' fill='%235B9A88'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:      #0E1A21;
+  --ink-2:    #142430;
+  --ink-3:    #1E323E;
+  --bone:     #EDE6D8;
+  --muted:    #97A3A6;
+  --brass:    #C79A3C;
+  --patina:   #5B9A88;
+  --display: 'Big Shoulders Display','Oswald','Arial Narrow',Impact,sans-serif;
+  --body:    'Work Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:    'Space Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --gutter: clamp(1.25rem, 5vw, 4.5rem);
+  --maxw: 1240px;
+  --pad-section: clamp(4.5rem, 11vw, 8.5rem);
+  --ease: cubic-bezier(.2,.8,.2,1);
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+@media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } }
+body{
+  margin:0;
+  background:var(--ink);
+  color:var(--bone);
+  font-family:var(--body);
+  font-size:clamp(1rem,.96rem + .25vw,1.1rem);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+body::after{
+  content:"";
+  position:fixed; inset:0; z-index:9999; pointer-events:none;
+  opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+::selection{ background:var(--brass); color:var(--ink); }
+:focus-visible{ outline:2px solid var(--brass); outline-offset:3px; border-radius:2px; }
+.skip{ position:absolute; left:-9999px; top:0; z-index:10000; background:var(--brass); color:var(--ink); padding:.7rem 1.1rem; font-family:var(--mono); font-size:.8rem; }
+.skip:focus{ left:.5rem; top:.5rem; }
+.wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:var(--gutter); }
+
+/* ── type ── */
+.eyebrow{ font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--patina); margin:0 0 1.4rem; display:flex; align-items:center; gap:.75rem; }
+.eyebrow::after{ content:""; flex:1; height:1px; background:var(--ink-3); max-width:9rem; }
+h1,h2,h3{ font-family:var(--display); font-weight:800; text-transform:uppercase; line-height:.86; letter-spacing:-.005em; margin:0; }
+h2{ font-size:clamp(2.4rem,7vw,4.6rem); }
+h3{ font-size:clamp(1.35rem,2.6vw,1.85rem); line-height:.95; }
+.lede{ font-size:clamp(1.08rem,1rem + .55vw,1.3rem); color:var(--bone); max-width:44ch; }
+p{ margin:0 0 1.15em; }
+p:last-child{ margin-bottom:0; }
+.dim{ color:var(--muted); }
+
+/* ── buttons ── */
+.btn{ display:inline-flex; align-items:center; gap:.6rem; font-family:var(--mono); font-size:.78rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; padding:1.05rem 1.7rem; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:background .25s var(--ease), color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease); }
+.btn--solid{ background:var(--brass); color:var(--ink); }
+.btn--solid:hover{ background:var(--bone); transform:translateY(-2px); }
+.btn--ghost{ border-color:var(--ink-3); color:var(--bone); }
+.btn--ghost:hover{ border-color:var(--brass); color:var(--brass); transform:translateY(-2px); }
+@media (prefers-reduced-motion:reduce){ .btn:hover{ transform:none; } }
+
+/* ── back link ── */
+.back-link{ font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; display:inline-flex; align-items:center; gap:.5rem; transition:color .2s; }
+.back-link:hover{ color:var(--brass); }
+
+/* ── header ── */
+.site-header{ position:sticky; top:0; z-index:100; background:color-mix(in srgb, var(--ink) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid transparent; transition:border-color .3s var(--ease), background .3s var(--ease); }
+.site-header.is-stuck{ border-bottom-color:var(--ink-3); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; gap:1rem; min-height:64px; }
+.brand{ font-family:var(--display); font-weight:900; font-size:1.5rem; letter-spacing:.02em; text-transform:uppercase; text-decoration:none; line-height:1; }
+.brand em{ font-style:normal; color:var(--brass); }
+.nav{ display:flex; align-items:center; gap:2rem; }
+.nav a{ font-family:var(--mono); font-size:.75rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--muted); padding:.4rem 0; position:relative; transition:color .2s; }
+.nav a::after{ content:""; position:absolute; left:0; right:100%; bottom:0; height:1px; background:var(--brass); transition:right .3s var(--ease); }
+.nav a:hover{ color:var(--bone); }
+.nav a:hover::after{ right:0; }
+.nav .btn{ padding:.75rem 1.15rem; }
+.nav .btn:hover{ color:var(--ink); }
+.nav .btn::after{ display:none; }
+.nav-toggle{ display:none; background:none; border:1px solid var(--ink-3); color:var(--bone); font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; padding:.65rem .9rem; cursor:pointer; }
+@media (max-width:860px){
+  .nav-toggle{ display:block; }
+  .nav{ position:absolute; inset:64px 0 auto 0; flex-direction:column; align-items:flex-start; gap:0; background:var(--ink); border-bottom:1px solid var(--ink-3); padding:.5rem var(--gutter) 1.75rem; display:none; }
+  .nav.is-open{ display:flex; }
+  .nav a{ width:100%; padding:.95rem 0; border-bottom:1px solid var(--ink-3); font-size:.85rem; }
+  .nav .btn{ margin-top:1.25rem; border-bottom:0; }
+}
+
+/* ── hero ── */
+.hero{ padding-block:clamp(3rem,9vw,6rem) clamp(3.5rem,8vw,6rem); position:relative; }
+.hero::before{ content:""; position:absolute; left:0; right:0; top:38%; height:1px; background:linear-gradient(90deg, transparent, var(--ink-3) 18%, var(--ink-3) 82%, transparent); pointer-events:none; }
+.hero-title{ font-size:clamp(3.6rem,14.5vw,12rem); line-height:.82; margin:0 0 2rem; position:relative; }
+.hero-title span{ display:block; }
+.hero-title .l2{ color:var(--brass); }
+.hero-title .l4{ color:transparent; -webkit-text-stroke:1.5px var(--bone); }
+.hero-body{ display:grid; gap:clamp(1.75rem,4vw,3.5rem); grid-template-columns:1fr; align-items:end; margin-bottom:clamp(2.5rem,6vw,4rem); }
+@media (min-width:900px){ .hero-body{ grid-template-columns:minmax(0,1.15fr) minmax(0,1fr); } }
+.hero-cta{ display:flex; flex-wrap:wrap; gap:.75rem; }
+
+/* ── board ── */
+.board{ border:1px solid var(--ink-3); background:linear-gradient(180deg, var(--ink-2), var(--ink)); perspective:900px; }
+.board__head{ display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.7rem 1.1rem; border-bottom:1px solid var(--ink-3); font-family:var(--mono); font-size:.68rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); }
+.board__live{ display:inline-flex; align-items:center; gap:.5rem; color:var(--patina); }
+.board__dot{ width:7px; height:7px; border-radius:50%; background:var(--patina); animation:pulse 2.4s ease-in-out infinite; }
+@keyframes pulse{ 0%,100%{ opacity:1 } 50%{ opacity:.25 } }
+.board__row{ display:grid; grid-template-columns:repeat(2,1fr); }
+@media (min-width:640px){ .board__row{ grid-template-columns:1.1fr 1.6fr 1fr; } }
+.cell{ position:relative; padding:1.1rem 1.1rem 1.25rem; border-right:1px solid var(--ink-3); border-bottom:1px solid var(--ink-3); transform-origin:50% 50%; backface-visibility:hidden; }
+.cell:last-child{ border-right:0; }
+@media (min-width:640px){ .cell{ border-bottom:0; } }
+.cell::after{ content:""; position:absolute; left:0; right:0; top:50%; height:1px; background:rgba(0,0,0,.42); pointer-events:none; }
+.cell__label{ font-family:var(--mono); font-size:.62rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--muted); margin-bottom:.4rem; }
+.cell__value{ font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(1.25rem,3.2vw,1.9rem); line-height:1; letter-spacing:.01em; }
+.cell--date .cell__value{ color:var(--brass); }
+.cell__sub{ font-family:var(--mono); font-size:.7rem; color:var(--muted); margin-top:.4rem; }
+.board__foot{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:.75rem; padding:.85rem 1.1rem; border-top:1px solid var(--ink-3); }
+.board__foot a{ font-family:var(--mono); font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--brass); text-decoration:none; border-bottom:1px solid transparent; transition:border-color .2s; }
+.board__foot a:hover{ border-bottom-color:var(--brass); }
+.board__foot span{ font-family:var(--mono); font-size:.7rem; color:var(--muted); }
+.js-flap .cell{ animation:flap .55s var(--ease) both; animation-delay:var(--d,0s); }
+@keyframes flap{ from{ transform:rotateX(-92deg); opacity:0; } to{ transform:rotateX(0); opacity:1; } }
+
+/* ── sections ── */
+.section{ padding-block:var(--pad-section); border-top:1px solid var(--ink-3); }
+[data-reveal]{ opacity:0; transform:translateY(22px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
+[data-reveal].is-in{ opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce){ [data-reveal]{ opacity:1; transform:none; transition:none; } .js-flap .cell{ animation:none; } .board__dot{ animation:none; } }
+
+/* ── about ── */
+.about-grid{ display:grid; gap:clamp(2rem,5vw,4.5rem); grid-template-columns:1fr; }
+@media (min-width:900px){ .about-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); } }
+.about-copy h2{ margin-bottom:1.6rem; max-width:12ch; }
+.facts{ list-style:none; margin:0; padding:0; }
+.facts li{ padding:1.4rem 0; border-top:1px solid var(--ink-3); display:grid; gap:.5rem; }
+.facts li:last-child{ border-bottom:1px solid var(--ink-3); }
+.facts .fact__k{ font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--brass); }
+.facts .fact__v{ color:var(--bone); }
+
+/* ── personnel ── */
+.directors{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.5rem 2.25rem; margin:0 0 1.75rem; }
+.directors__k{ color:var(--brass); font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; flex:0 0 auto; }
+.directors__v{ font-family:var(--mono); font-size:.82rem; color:var(--bone); }
+.directors__v em{ font-style:normal; color:var(--muted); }
+.roster{ display:grid; gap:1px; background:var(--ink-3); border:1px solid var(--ink-3); }
+.personnel{ display:grid; gap:1px; background:var(--ink-3); grid-template-columns:1fr; }
+@media (min-width:640px){ .personnel{ grid-template-columns:repeat(2,1fr); } }
+.sizes{ list-style:none; margin:0; padding:0; display:grid; gap:1px; background:var(--ink-3); grid-template-columns:repeat(2,1fr); }
+@media (min-width:820px){ .sizes{ grid-template-columns:repeat(4,1fr); } }
+.sizes li{ background:var(--ink); padding:1.15rem 1.5rem 1.3rem; }
+.sizes li.is-standard{ background:var(--ink-2); }
+.sizes__n{ display:block; font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(1.05rem,2vw,1.3rem); line-height:1; color:var(--muted); }
+.sizes li.is-standard .sizes__n{ color:var(--brass); }
+.sizes__d{ display:block; font-family:var(--mono); font-size:.68rem; color:var(--muted); margin-top:.5rem; line-height:1.65; }
+.sec{ background:var(--ink); padding:1.6rem 1.5rem 1.8rem; transition:background .3s var(--ease); }
+.sec:hover{ background:var(--ink-2); }
+.sec__name{ font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--brass); margin:0 0 1rem; padding-bottom:.8rem; border-bottom:1px solid var(--ink-3); }
+.chairs{ list-style:none; margin:0; padding:0; }
+.chairs li{ padding:.85rem 0; }
+.chairs li + li{ border-top:1px solid rgba(237,230,216,.06); }
+.chair__inst{ display:block; font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(1.15rem,2.2vw,1.5rem); line-height:1; color:var(--bone); }
+.chair__name{ display:block; font-family:var(--mono); font-size:.73rem; color:var(--muted); margin-top:.45rem; }
+.chair__name b{ color:var(--patina); font-weight:400; }
+.players-note{ margin-top:1.75rem; font-family:var(--mono); font-size:.78rem; color:var(--muted); max-width:62ch; line-height:1.9; }
+
+/* ── listen ── */
+.tracks{ list-style:none; margin:2.5rem 0 0; padding:0; }
+.track{ display:grid; gap:.35rem 1.5rem; align-items:baseline; grid-template-columns:1fr auto; padding:1.25rem 0; border-top:1px solid var(--ink-3); }
+.track:last-child{ border-bottom:1px solid var(--ink-3); }
+.track__title{ font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:clamp(1.2rem,2.6vw,1.7rem); line-height:1; }
+.track__meta{ font-family:var(--mono); font-size:.72rem; color:var(--muted); grid-column:1; }
+.track__meta b{ color:var(--patina); font-weight:400; }
+.track__time{ font-family:var(--mono); font-size:.8rem; color:var(--brass); grid-row:1/3; grid-column:2; }
+.embed-slot{ margin-top:2.5rem; border:1px dashed var(--ink-3); padding:clamp(1.5rem,4vw,2.5rem); text-align:center; }
+.embed-slot p{ font-family:var(--mono); font-size:.78rem; color:var(--muted); max-width:52ch; margin-inline:auto; }
+.platforms{ display:flex; flex-wrap:wrap; gap:.6rem; margin-top:2rem; }
+.platforms a{ font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; color:var(--muted); border:1px solid var(--ink-3); padding:.7rem 1.05rem; transition:.25s var(--ease); }
+.platforms a:hover{ color:var(--brass); border-color:var(--brass); }
+
+/* ── gigs ── */
+.gigs{ list-style:none; margin:2.5rem 0 0; padding:0; }
+.gig{ display:grid; gap:.6rem 1.75rem; align-items:center; grid-template-columns:1fr; padding:1.65rem 0; border-top:1px solid var(--ink-3); transition:background .3s var(--ease); }
+.gig:last-of-type{ border-bottom:1px solid var(--ink-3); }
+@media (min-width:820px){ .gig{ grid-template-columns:7.5rem minmax(0,1fr) 9rem 9rem; padding-inline:.75rem; } .gig:hover{ background:var(--ink-2); } }
+.gig__date{ display:flex; align-items:baseline; gap:.6rem; }
+.gig__day{ font-family:var(--display); font-weight:800; font-size:2.4rem; line-height:.8; color:var(--brass); }
+.gig__mon{ font-family:var(--mono); font-size:.72rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+.gig__venue{ font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:clamp(1.3rem,2.8vw,1.75rem); line-height:1; }
+.gig__where{ font-family:var(--mono); font-size:.72rem; color:var(--muted); margin-top:.4rem; }
+.gig__time{ font-family:var(--mono); font-size:.8rem; color:var(--bone); }
+.gig__cta{ justify-self:start; }
+@media (min-width:820px){ .gig__cta{ justify-self:end; } }
+.tag{ font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; padding:.55rem .85rem; display:inline-block; text-decoration:none; border:1px solid var(--ink-3); color:var(--muted); transition:.25s var(--ease); }
+a.tag:hover{ border-color:var(--brass); color:var(--brass); }
+.tag--free{ border-color:var(--patina); color:var(--patina); }
+.tag--gone{ opacity:.5; }
+.past{ margin-top:2.75rem; font-family:var(--mono); font-size:.8rem; color:var(--muted); line-height:2; }
+.past strong{ color:var(--bone); font-weight:400; }
+
+/* ── bookings ── */
+.book-grid{ display:grid; gap:clamp(2.5rem,6vw,5rem); grid-template-columns:1fr; align-items:start; }
+@media (min-width:940px){ .book-grid{ grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); } }
+.field{ margin-bottom:1.4rem; }
+.field label{ display:block; font-family:var(--mono); font-size:.7rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); margin-bottom:.55rem; }
+.field input,.field select,.field textarea{ width:100%; background:var(--ink-2); border:1px solid var(--ink-3); color:var(--bone); font-family:var(--body); font-size:1rem; padding:.95rem 1rem; border-radius:0; transition:border-color .25s var(--ease); appearance:none; }
+.field textarea{ min-height:150px; resize:vertical; }
+.field input:focus,.field select:focus,.field textarea:focus{ border-color:var(--brass); outline:none; }
+.field select{ background-image:linear-gradient(45deg,transparent 50%,var(--brass) 50%),linear-gradient(135deg,var(--brass) 50%,transparent 50%); background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%; background-size:6px 6px,6px 6px; background-repeat:no-repeat; }
+.field-row{ display:grid; gap:1.4rem; grid-template-columns:1fr; }
+@media (min-width:560px){ .field-row{ grid-template-columns:1fr 1fr; } }
+.form-status{ font-family:var(--mono); font-size:.78rem; color:var(--patina); margin-top:1rem; min-height:1.4em; }
+.book-aside .facts li{ padding:1.25rem 0; }
+.book-aside a{ color:var(--brass); text-decoration:none; border-bottom:1px solid var(--ink-3); }
+.book-aside a:hover{ border-bottom-color:var(--brass); }
+
+/* ── footer ── */
+.site-footer{ border-top:1px solid var(--ink-3); padding-block:clamp(3.5rem,8vw,5.5rem) 2.5rem; }
+.foot-grid{ display:grid; gap:2.5rem; grid-template-columns:1fr; }
+@media (min-width:820px){ .foot-grid{ grid-template-columns:minmax(0,1fr) minmax(0,1fr); } }
+.signup{ display:flex; gap:0; max-width:26rem; margin-top:1.1rem; }
+.signup input{ flex:1; min-width:0; background:var(--ink-2); border:1px solid var(--ink-3); border-right:0; color:var(--bone); font-family:var(--body); padding:.9rem 1rem; border-radius:0; }
+.signup input:focus{ border-color:var(--brass); outline:none; }
+.signup button{ flex:0 0 auto; }
+.socials{ display:flex; flex-wrap:wrap; gap:1.5rem; margin-top:1.1rem; }
+.socials a{ font-family:var(--mono); font-size:.74rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-decoration:none; transition:color .2s; }
+.socials a:hover{ color:var(--brass); }
+.acknowledgement{ margin-top:clamp(2.5rem,6vw,4rem); padding-top:2rem; border-top:1px solid var(--ink-3); font-size:.9rem; color:var(--muted); max-width:60ch; }
+.colophon{ margin-top:2rem; display:flex; flex-wrap:wrap; gap:.75rem 2rem; justify-content:space-between; font-family:var(--mono); font-size:.68rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="newcastle-jazz-collective.html">Newcastle <em>Jazz</em> Collective</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#collective">The collective</a>
+      <a href="#players">Players</a>
+      <a href="#gigs">Gigs</a>
+      <a href="index.html" class="btn btn--ghost" style="font-size:.72rem;">← Jeremy Burrows</a>
+      <a class="btn btn--solid" href="#book">Book the band</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Newcastle, NSW &middot; Formed 2025</p>
+    <h1 class="hero-title">
+      <span class="l1">The</span>
+      <span class="l2">Newcastle</span>
+      <span class="l3">Jazz</span>
+      <span class="l4">Collective</span>
+    </h1>
+    <div class="hero-body">
+      <p class="lede">
+        Jazz musicians from across the Hunter playing the Jazz Messengers book &mdash;
+        the arrangements exactly as written, the solos entirely our own. Hard bop
+        first, and outward from there.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn--solid" href="#book">Book the band</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE COLLECTIVE -->
+<section class="section" id="collective">
+  <div class="wrap about-grid">
+    <div class="about-copy" data-reveal>
+      <p class="eyebrow">What we play</p>
+      <h2>The Messengers book</h2>
+      <p>
+        Six players working through the Art Blakey catalogue, with the arrangements
+        played as written. The heads, the backgrounds, the shout choruses, the
+        three-horn voicings that made those records sound the way they do &mdash;
+        that&rsquo;s the part worth getting exactly right, and we do.
+      </p>
+      <p class="dim">
+        The solos are ours. Nobody in this band is reciting somebody else&rsquo;s chorus back
+        at you, because that was never what the music was for. The writing is the
+        tradition. What happens over the top of it is why anyone came.
+      </p>
+    </div>
+    <ul class="facts" data-reveal>
+      <li>
+        <span class="fact__k">The arrangements</span>
+        <span class="fact__v">Taken off the original records and played as written &mdash; heads, backgrounds, ensemble figures, the lot.</span>
+      </li>
+      <li>
+        <span class="fact__k">The solos</span>
+        <span class="fact__v">Improvised, every time. Same charts, different night, different music.</span>
+      </li>
+      <li>
+        <span class="fact__k">The band</span>
+        <span class="fact__v">A sextet as standard &mdash; three horns and rhythm. Contracts to four and expands to seven, depending on what the chart was written for.</span>
+      </li>
+      <li>
+        <span class="fact__k">Where it goes</span>
+        <span class="fact__v">Hard bop is the starting point, not the boundary. Earlier and later styles as the band grows into them.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- PLAYERS -->
+<section class="section" id="players">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Personnel</p>
+    <h2 data-reveal style="max-width:14ch;margin-bottom:2rem">Sized to the chart</h2>
+    <div class="directors" data-reveal>
+      <span class="directors__k">Artistic Directors</span>
+      <span class="directors__v">Matt Keegan <em>&mdash; Trombone</em></span>
+      <span class="directors__v">Jeremy Burrows <em>&mdash; Double Bass</em></span>
+    </div>
+    <div class="roster" data-reveal>
+      <div class="personnel">
+        <div class="sec">
+          <h3 class="sec__name">Front line</h3>
+          <ul class="chairs">
+            <li><span class="chair__inst">Trumpet</span><span class="chair__name">Mat Woodcock / Dave Thompson</span></li>
+            <li><span class="chair__inst">Saxophone</span><span class="chair__name">Gareth Lewis / Shane Shanks</span></li>
+            <li><span class="chair__inst">Trombone</span><span class="chair__name">Matt Keegan &middot; <b>Artistic Director</b></span></li>
+          </ul>
+        </div>
+        <div class="sec">
+          <h3 class="sec__name">Rhythm section</h3>
+          <ul class="chairs">
+            <li><span class="chair__inst">Piano</span><span class="chair__name">Jo Cadman</span></li>
+            <li><span class="chair__inst">Double Bass</span><span class="chair__name">Jeremy Burrows &middot; <b>Artistic Director</b></span></li>
+            <li><span class="chair__inst">Drums</span><span class="chair__name">Simeon Staker</span></li>
+          </ul>
+        </div>
+      </div>
+      <ul class="sizes">
+        <li>
+          <span class="sizes__n">Quartet</span>
+          <span class="sizes__d">One horn and rhythm. Ballads and small rooms.</span>
+        </li>
+        <li>
+          <span class="sizes__n">Quintet</span>
+          <span class="sizes__d">Trumpet and tenor. The 1958 book, as written.</span>
+        </li>
+        <li class="is-standard">
+          <span class="sizes__n">Sextet</span>
+          <span class="sizes__d">Standard. Three horns, the 1961 front line.</span>
+        </li>
+        <li>
+          <span class="sizes__n">Septet</span>
+          <span class="sizes__d">A fourth horn, where the voicing calls for one.</span>
+        </li>
+      </ul>
+    </div>
+    <p class="players-note" data-reveal>
+      The chart decides, not the budget. The 1958 book is written for two horns and
+      doesn&rsquo;t want a third sitting in it; some of the later writing wants four. Deps
+      come from a standing list of Hunter players who know the book.
+    </p>
+  </div>
+</section>
+
+<!-- GIGS -->
+<section class="section" id="gigs">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal>Upcoming</p>
+    <h2 data-reveal style="max-width:12ch">Where to find us</h2>
+    <!-- [EDIT] Add real gig dates here when they're confirmed -->
+    <ul class="gigs" data-reveal>
+    </ul>
+    <p style="font-family:var(--mono);font-size:.82rem;color:var(--muted);margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--ink-3);">
+      No upcoming shows confirmed yet &mdash; check back soon, or <a href="#book" style="color:var(--brass);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s;" onmouseover="this.style.borderBottomColor='var(--brass)'" onmouseout="this.style.borderBottomColor='transparent'">get in touch to book us</a>.
+    </p>
+  </div>
+</section>
+
+<!-- BOOKINGS -->
+<section class="section" id="book">
+  <div class="wrap book-grid">
+    <div data-reveal>
+      <p class="eyebrow">Bookings</p>
+      <h2 style="max-width:14ch;margin-bottom:1.5rem">Book the band</h2>
+      <p class="dim" style="max-width:48ch;margin-bottom:2.5rem">
+        Tell us the room, the date and how much stage you have. We&rsquo;ll come back with a
+        programme, a stage plot and a fee. Presenters, festivals, venues and schools welcome.
+      </p>
+      <!-- [EDIT] Sign up at formspree.io and replace the action URL to make this send email -->
+      <form id="bookingForm" novalidate>
+        <div class="field-row">
+          <div class="field">
+            <label for="bk-name">Your name</label>
+            <input id="bk-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="bk-email">Email</label>
+            <input id="bk-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="bk-type">Type of event</label>
+            <select id="bk-type" name="eventType">
+              <option>Concert presenter</option>
+              <option>Festival</option>
+              <option>Venue booking</option>
+              <option>School or workshop</option>
+              <option>Corporate event</option>
+              <option>Private engagement</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="bk-date">Date of event</label>
+            <input id="bk-date" name="date" type="date">
+          </div>
+        </div>
+        <div class="field">
+          <label for="bk-msg">About the event</label>
+          <textarea id="bk-msg" name="message" placeholder="Where it is, capacity, how much stage you have, set length, and whether you have a programme in mind." required></textarea>
+        </div>
+        <button class="btn btn--solid" type="submit">Send enquiry</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="book-aside" data-reveal>
+      <ul class="facts">
+        <li>
+          <span class="fact__k">Email</span>
+          <span class="fact__v"><a href="mailto:jeremyburrows@jeremy-burrows-music.com">jeremyburrows@jeremy-burrows-music.com</a></span>
+        </li>
+        <li>
+          <span class="fact__k">Response time</span>
+          <span class="fact__v">Two business days. Quicker if the date is close.</span>
+        </li>
+        <li>
+          <span class="fact__k">Stage</span>
+          <span class="fact__v">A sextet needs roughly 4m &times; 3m, plus a house piano or room for a stage keyboard. Stage plot and input list supplied for whichever line-up you book.</span>
+        </li>
+        <li>
+          <span class="fact__k">Good to know</span>
+          <span class="fact__v">We hold a date for seven days without a deposit. Public liability certificate available on request.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h3 style="margin-bottom:.75rem">Get the gig list</h3>
+        <p class="dim" style="font-size:.95rem;max-width:38ch">One email a month with the dates. Nothing else.</p>
+        <form class="signup" id="signupForm" novalidate>
+          <label for="su-email" class="skip">Email address</label>
+          <input id="su-email" type="email" placeholder="you@example.com" required>
+          <button class="btn btn--solid" type="submit">Join</button>
+        </form>
+        <p class="form-status" id="signupStatus" role="status" aria-live="polite"></p>
+      </div>
+      <div>
+        <h3 style="margin-bottom:.75rem">Elsewhere</h3>
+        <div class="socials">
+          <!-- [EDIT] Add real social links -->
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Bandcamp</a>
+          <a href="https://www.youtube.com/@JeremyBurrows-w3i" target="_blank" rel="noopener" onclick="window.open('https://www.youtube.com/@JeremyBurrows-w3i','_blank','noopener,noreferrer');return false;">YouTube</a>
+        </div>
+        <div style="margin-top:2rem;">
+          <a href="index.html" class="back-link">← Back to Jeremy Burrows</a>
+        </div>
+      </div>
+    </div>
+    <p class="acknowledgement">
+      The Newcastle Jazz Collective plays and records on the lands of the Awabakal and
+      Worimi peoples. We pay our respects to Elders past and present, and acknowledge
+      that this always was and always will be Aboriginal land.
+    </p>
+    <div class="colophon">
+      <span>&copy; 2026 The Newcastle Jazz Collective</span>
+      <span>Newcastle, NSW, Australia</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var BOOKINGS_EMAIL = 'jeremyburrows@jeremy-burrows-music.com';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile nav */
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('nav');
+  toggle.addEventListener('click', function () {
+    var open = nav.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.textContent = open ? 'Close' : 'Menu';
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent = 'Menu'; }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && nav.classList.contains('is-open')) { nav.classList.remove('is-open'); toggle.setAttribute('aria-expanded','false'); toggle.textContent = 'Menu'; toggle.focus(); }
+  });
+
+  /* sticky header */
+  var header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', function () { header.classList.toggle('is-stuck', window.scrollY > 12); }, { passive: true });
+
+  /* scroll reveals */
+  var targets = document.querySelectorAll('[data-reveal]');
+  if (reduce || !('IntersectionObserver' in window)) {
+    targets.forEach(function (el) { el.classList.add('is-in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) { if (entry.isIntersecting) { entry.target.classList.add('is-in'); io.unobserve(entry.target); } });
+    }, { rootMargin:'0px 0px -12% 0px', threshold:0.08 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  /* booking form */
+  var form = document.getElementById('bookingForm');
+  var status = document.getElementById('formStatus');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = form.name.value.trim(), email = form.email.value.trim(), msg = form.message.value.trim();
+      if (!name || !email || !msg) { status.textContent = 'Add your name, email and a note about the event, then send again.'; status.style.color = 'var(--brass)'; return; }
+      var body = 'Name: ' + name + '\nEmail: ' + email + '\nEvent type: ' + form.eventType.value + '\nDate: ' + (form.date.value || 'not set yet') + '\n\n' + msg;
+      window.location.href = 'mailto:' + BOOKINGS_EMAIL + '?subject=' + encodeURIComponent('Booking enquiry — ' + form.eventType.value) + '&body=' + encodeURIComponent(body);
+      status.textContent = 'Opening your email app with the enquiry ready to send.';
+      status.style.color = 'var(--patina)';
+    });
+  }
+
+  /* mailing list */
+  var signup = document.getElementById('signupForm');
+  var signupStatus = document.getElementById('signupStatus');
+  if (signup) {
+    signup.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = document.getElementById('su-email'), value = input.value.trim();
+      if (!value || value.indexOf('@') === -1) { signupStatus.textContent = 'That email address looks incomplete.'; signupStatus.style.color = 'var(--brass)'; input.focus(); return; }
+      window.location.href = 'mailto:' + BOOKINGS_EMAIL + '?subject=' + encodeURIComponent('Mailing list') + '&body=' + encodeURIComponent('Please add ' + value + ' to the gig list.');
+      signupStatus.textContent = 'Opening your email app to confirm.'; signupStatus.style.color = 'var(--patina)'; input.value = '';
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1150,6 +1150,7 @@
     <li><a href="#" onclick="navigate('home')" id="nav-home" class="active">Home</a></li>
     <li><a href="#" onclick="navigate('gigs')" id="nav-gigs">Gigs</a></li>
     <li><a href="#" onclick="navigate('soul-junction')" id="nav-soul-junction">Soul Junction NC</a></li>
+    <li><a href="newcastle-jazz-collective.html" id="nav-njc">Newcastle Jazz Collective</a></li>
     <li><a href="#" onclick="navigate('media')" id="nav-media">Media</a></li>
     <li><a href="#" onclick="navigate('contact')" id="nav-contact">Contact</a></li>
   </ul>
@@ -1163,6 +1164,7 @@
   <a href="#" onclick="navigate('home');toggleMenu()">Home</a>
   <a href="#" onclick="navigate('gigs');toggleMenu()">Gigs</a>
   <a href="#" onclick="navigate('soul-junction');toggleMenu()">Soul Junction NC</a>
+  <a href="newcastle-jazz-collective.html">Newcastle Jazz Collective</a>
   <a href="#" onclick="navigate('media');toggleMenu()">Media</a>
   <a href="#" onclick="navigate('contact');toggleMenu()">Contact</a>
 </div>
@@ -1501,6 +1503,7 @@
     <a href="#" onclick="navigate('home')">Home</a>
     <a href="#" onclick="navigate('gigs')">Gigs</a>
     <a href="#" onclick="navigate('soul-junction')">Soul Junction NC</a>
+    <a href="newcastle-jazz-collective.html">Newcastle Jazz Collective</a>
     <a href="#" onclick="navigate('media')">Media</a>
     <a href="#" onclick="navigate('contact')">Contact</a>
   </nav>
@@ -1633,6 +1636,13 @@ function navigate(page) {
   currentPage = page;
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
+  // Update URL so each page is directly linkable
+  if (page === 'home') {
+    history.replaceState(null, '', window.location.pathname);
+  } else {
+    history.replaceState(null, '', '#' + page);
+  }
+
   if (page === 'home') renderGigs('home-gigs', null);
   if (page === 'gigs') renderGigs('gigs-list', null);
   if (page === 'soul-junction') renderGigs('sj-gigs', 'Soul Junction NC');
@@ -1651,12 +1661,16 @@ function toggleMenu() {
 // ── CONTACT FORM ─────────────────────────────────────────────────
 function submitForm(e) {
   e.preventDefault();
-  document.getElementById('contact-form').style.display = 'none';
+  const form = document.getElementById('contact-form');
+  const name = form.querySelector('input[type="text"]').value.trim();
+  const email = form.querySelector('input[type="email"]').value.trim();
+  const type = form.querySelector('select').value;
+  const msg = form.querySelector('textarea').value.trim();
+  if (!name || !email || !msg) return;
+  const body = 'Name: ' + name + '\nEmail: ' + email + '\nEnquiry type: ' + type + '\n\n' + msg;
+  window.location.href = 'mailto:jeremyburrows@jeremy-burrows-music.com?subject=' + encodeURIComponent(type + ' — Jeremy Burrows Music') + '&body=' + encodeURIComponent(body);
+  form.style.display = 'none';
   document.getElementById('form-success').style.display = 'block';
-  // To make this actually send email, integrate with Formspree:
-  // 1. Sign up at formspree.io
-  // 2. Create a form and get your endpoint
-  // 3. Set the <form> action to your Formspree URL and method="POST"
 }
 
 // ── EXTERNAL LINKS ───────────────────────────────────────────────
@@ -1673,7 +1687,17 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(this.href, '_blank', 'noopener,noreferrer');
     });
   });
-  navigate('home');
+
+  // Read URL hash on load so pages are directly linkable
+  const validPages = ['home', 'gigs', 'soul-junction', 'media', 'contact'];
+  const hash = window.location.hash.slice(1);
+  navigate(validPages.includes(hash) ? hash : 'home');
+
+  // Support browser back/forward buttons
+  window.addEventListener('hashchange', () => {
+    const newHash = window.location.hash.slice(1);
+    navigate(validPages.includes(newHash) ? newHash : 'home');
+  });
 });
 </script>
 </body>
