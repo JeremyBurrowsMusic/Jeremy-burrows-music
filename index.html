@@ -1145,14 +1145,14 @@
 
 <!-- NAVIGATION -->
 <nav id="main-nav">
-  <a href="#" class="nav-logo" onclick="navigate('home')">Jeremy Burrows</a>
+  <a href="#" class="nav-logo" onclick="return navigate('home')">Jeremy Burrows</a>
   <ul class="nav-links">
-    <li><a href="#" onclick="navigate('home')" id="nav-home" class="active">Home</a></li>
-    <li><a href="#" onclick="navigate('gigs')" id="nav-gigs">Gigs</a></li>
-    <li><a href="#" onclick="navigate('soul-junction')" id="nav-soul-junction">Soul Junction NC</a></li>
+    <li><a href="#" onclick="return navigate('home')" id="nav-home" class="active">Home</a></li>
+    <li><a href="#" onclick="return navigate('gigs')" id="nav-gigs">Gigs</a></li>
+    <li><a href="#" onclick="return navigate('soul-junction')" id="nav-soul-junction">Soul Junction NC</a></li>
     <li><a href="newcastle-jazz-collective.html" id="nav-njc">Newcastle Jazz Collective</a></li>
-    <li><a href="#" onclick="navigate('media')" id="nav-media">Media</a></li>
-    <li><a href="#" onclick="navigate('contact')" id="nav-contact">Contact</a></li>
+    <li><a href="#" onclick="return navigate('media')" id="nav-media">Media</a></li>
+    <li><a href="#" onclick="return navigate('contact')" id="nav-contact">Contact</a></li>
   </ul>
   <div class="nav-hamburger" onclick="toggleMenu()" id="hamburger">
     <span></span><span></span><span></span>
@@ -1161,12 +1161,12 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobile-menu">
-  <a href="#" onclick="navigate('home');toggleMenu()">Home</a>
-  <a href="#" onclick="navigate('gigs');toggleMenu()">Gigs</a>
-  <a href="#" onclick="navigate('soul-junction');toggleMenu()">Soul Junction NC</a>
+  <a href="#" onclick="return navigate('home') && toggleMenu()">Home</a>
+  <a href="#" onclick="return navigate('gigs') && toggleMenu()">Gigs</a>
+  <a href="#" onclick="return navigate('soul-junction') && toggleMenu()">Soul Junction NC</a>
   <a href="newcastle-jazz-collective.html">Newcastle Jazz Collective</a>
-  <a href="#" onclick="navigate('media');toggleMenu()">Media</a>
-  <a href="#" onclick="navigate('contact');toggleMenu()">Contact</a>
+  <a href="#" onclick="return navigate('media') && toggleMenu()">Media</a>
+  <a href="#" onclick="return navigate('contact') && toggleMenu()">Contact</a>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -1201,8 +1201,8 @@
       <span class="pill pill-double">Double Bass</span>
     </div>
     <div class="hero-ctas">
-      <a href="#" class="btn-primary" onclick="navigate('gigs')">Upcoming Gigs</a>
-      <a href="#" class="btn-ghost" onclick="navigate('media')">Watch &amp; Listen</a>
+      <a href="#" class="btn-primary" onclick="return navigate('gigs')">Upcoming Gigs</a>
+      <a href="#" class="btn-ghost" onclick="return navigate('media')">Watch &amp; Listen</a>
     </div>
     <div class="hero-scroll">
       <div class="scroll-line"></div>
@@ -1279,7 +1279,7 @@
     <div class="section-heading">Upcoming Shows</div>
     <div class="gig-list" id="home-gigs"></div>
     <div style="text-align:center;margin-top:32px;">
-      <a href="#" class="btn-ghost" onclick="navigate('gigs')">All Gigs →</a>
+      <a href="#" class="btn-ghost" onclick="return navigate('gigs')">All Gigs →</a>
     </div>
   </div>
 
@@ -1290,7 +1290,7 @@
       <h3 style="font-family:var(--font-display);font-size:clamp(32px,5vw,52px);font-weight:300;color:var(--cream);line-height:1.1;margin:12px 0;">Soul Junction <em style="font-style:italic;color:var(--gold-light);">NC</em></h3>
       <p style="font-family:var(--font-display);font-style:italic;font-size:18px;color:var(--muted);margin-bottom:24px;">Newcastle's groove quartet — soul, funk, jazz &amp; bossa nova</p>
       <p style="font-size:15px;color:var(--cream-dim);line-height:1.8;margin-bottom:32px;">A Newcastle band bringing infectious grooves and sun-drenched melodies to venues across the Hunter region. Scales from duo to seven-piece to suit your event.</p>
-      <a href="#" class="btn-primary" onclick="navigate('soul-junction')">Meet the Band →</a>
+      <a href="#" class="btn-primary" onclick="return navigate('soul-junction')">Meet the Band →</a>
     </div>
   </div>
 </section>
@@ -1380,7 +1380,7 @@
       <div class="section-heading">Book Soul Junction NC</div>
       <div style="max-width:600px;">
         <p style="font-size:15px;color:var(--cream-dim);line-height:1.8;margin-bottom:24px;">Available for pub and bar residencies, private functions, corporate events, and festivals. Get in touch to discuss availability and requirements.</p>
-        <a href="#" class="btn-primary" onclick="navigate('contact')">Enquire Now</a>
+        <a href="#" class="btn-primary" onclick="return navigate('contact')">Enquire Now</a>
       </div>
     </div>
   </div>
@@ -1500,12 +1500,12 @@
   <div class="footer-logo">Jeremy Burrows</div>
   <div class="footer-sub">Bass Player · Newcastle NSW · Jazz · Funk · Soul · Latin</div>
   <nav class="footer-nav">
-    <a href="#" onclick="navigate('home')">Home</a>
-    <a href="#" onclick="navigate('gigs')">Gigs</a>
-    <a href="#" onclick="navigate('soul-junction')">Soul Junction NC</a>
+    <a href="#" onclick="return navigate('home')">Home</a>
+    <a href="#" onclick="return navigate('gigs')">Gigs</a>
+    <a href="#" onclick="return navigate('soul-junction')">Soul Junction NC</a>
     <a href="newcastle-jazz-collective.html">Newcastle Jazz Collective</a>
-    <a href="#" onclick="navigate('media')">Media</a>
-    <a href="#" onclick="navigate('contact')">Contact</a>
+    <a href="#" onclick="return navigate('media')">Media</a>
+    <a href="#" onclick="return navigate('contact')">Contact</a>
   </nav>
   <div class="footer-copy">© 2026 Jeremy Burrows Music · Newcastle, NSW</div>
 </footer>
