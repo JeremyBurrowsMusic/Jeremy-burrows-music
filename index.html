@@ -1638,9 +1638,9 @@ function navigate(page) {
 
   // Update URL so each page is directly linkable
   if (page === 'home') {
-    history.replaceState(null, '', window.location.pathname);
+    history.pushState(null, '', '/');
   } else {
-    history.replaceState(null, '', '#' + page);
+    history.pushState(null, '', '/#' + page);
   }
 
   if (page === 'home') renderGigs('home-gigs', null);
